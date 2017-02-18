@@ -667,7 +667,35 @@ function defineReadonlyProperty(obj, key, value) {
 	Object.defineProperty(obj, key, {value: copy, configurable: true})
 }
 
+function handleSync(syncContent) {
+	if (localStorage.getItem('sync') === null) {
+		return;
+	}
+	var syncType = localStorage.getItem('sync');
+	// Check the sync type
+	switch (syncType) {
+		case 'Microsoft':
+			syncMicrosoft.handleSync(syncContent);
+	};
+}
+
 function getSync() {
+	// Use cloud sync
+	if (localStorage.getItem('sync') !== null) {
+		var syncStorage = browser.storage.local;
+		return {
+			get: function(key, callback) {
+				callback(syncStorage.get(key));
+			},
+			set: function(source, callback) {
+				syncStorage.set(source);
+				if (callback) {
+					callback();
+				}
+				handleSync({"type": "setting", "content": source});
+			}
+		};
+	}
 	// Firefox do not support sync, use local to instead of it
 	if ("sync" in browser.storage) {
 		return browser.storage.sync;
