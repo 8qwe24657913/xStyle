@@ -27,6 +27,7 @@ var syncMicrosoft = {
 		var callback = function(response) {
 			var user_info = JSON.parse(response);
 			user_info.expires_at = new Date().getTime() + (user_info.expires_in * 1000);
+			localStorage.setItem('sync', 'Microsoft');
 			localStorage.setItem('microsoft', JSON.stringify(user_info));
 			_this.initFloder();
 		};

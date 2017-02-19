@@ -85,6 +85,23 @@
 		"message": "正在检查更新...",
 		"description": "Text to display when checking a style for an update"
 	},
+	"cloudSync": {
+		"message": "云同步",
+		"description": "Cloud sync title"
+	},
+	"cloudSyncDisconnected": {
+		"message": "您没有使用云同步",
+		"description": "Cloud sync disconnected"
+	},
+	"cloudSyncConnected": {
+		"message": "正在与 $driver$ 同步中",
+		"description": "Which driver is connected",
+		"placeholders": {
+			"driver": {
+				"content": "$1"
+			}
+		}
+	},
 	"cm_indentWithTabs": {
 		"message": "启用带智能缩进的标签页",
 		"description": "Label for the checkbox controlling tabs with smart indentation option for the style editor."
@@ -177,6 +194,9 @@
 		"message": "启用",
 		"description": "Label for the button to enable a style"
 	},
+	"exit": {
+		"message": "退出"
+	},
 	"exportLabel": {
 		"message": "导出",
 		"description": "Label for the button to export a style ('edit' page) or all styles ('manage' page)"
@@ -187,6 +207,9 @@
 	},
 	"extName": {
 		"message": "xStyle"
+	},
+	"fileList": {
+		"message": "文件列表"
 	},
 	"helpAlt": {
 		"message": "帮助",

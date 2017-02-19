@@ -1,0 +1,25 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title i18n-text="cloudSync"></title>
+	<link rel="stylesheet" href="src/third-party/bootstrap/css/bootstrap.min.css">
+	<script src="src/localization.js"></script>
+	<style>
+	#sync-disconnected .btn,#sync-connected .btn {
+		margin-left: 5px;
+	}
+	</style>
+</head>
+<body>
+<div class="container">
+	<h1 i18n-text="cloudSync"></h1>
+	<p id="sync-connected"></p>
+	<p id="sync-disconnected" i18n-text="cloudSyncDisconnected"></p>
+	<div class="panel panel-default">
+		<div class="panel-heading" i18n-text="fileList"></div>
+		<div id="content" class="panel-body"></div>
+	</div>
+</div>
+<script src="src/cloud.js"></script>
+</body>
+</html>

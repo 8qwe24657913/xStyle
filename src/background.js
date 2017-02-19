@@ -92,6 +92,11 @@ browser.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 				browser.contextMenus.update("show-badge", {checked: request.value});
 			}
 			break;
+		case "getSync":
+			sendResponse(localStorage.getItem('sync'));
+			break;
+		case "syncGetLogin":
+			
 	}
 });
 

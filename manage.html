@@ -9,7 +9,7 @@
 			}
 			a, a:visited {
 				color: #555;
-				-webkit-transition: color 0.5s;
+				transition: color 0.5s;
 			}
 			a:hover {
 				color: #999;
@@ -21,7 +21,7 @@
 				top: 0;
 				padding: 15px;
 				border-right: 1px dashed #AAA;
-				-webkit-box-shadow: 0 0 50px -18px black;
+				box-shadow: 0 0 50px -18px black;
 			}
 			#header h1 {
 				margin-top: 0;
@@ -183,15 +183,15 @@
 				<span id="update-all-no-updates" class="hidden" i18n-text="updateAllCheckSucceededNoUpdate"></span>
 			</p>
 			<p><a href="edit.html"><button id="add-style-label" i18n-text="addStyleLabel"></button></a></p>
-			<p>
-				<button id="file-all-styles" i18n-text="bckpInstStyles"></button>
-			</p>
-			<p>
-				<button id="unfile-all-styles" i18n-text="retrieveBckp"></button>
-			</p>
+			<p><button id="file-all-styles" i18n-text="bckpInstStyles"></button></p>
+			<p><button id="unfile-all-styles" i18n-text="retrieveBckp"></button></p>
 			<div id="options">
 				<h2 id="options-heading" i18n-text="optionsHeading"></h2>
 				<div><input id="show-badge" type="checkbox"><label id="show-badge-label" for="show-badge" i18n-text="prefShowBadge"></label></div>
+			</div>
+			<div id="cloud-sync">
+				<h2 id="cloud-sync-heading" i18n-text="cloudSync"></h2>
+				<div><a href="cloud.html" i18n-text="cloudSync"></a></div>
 			</div>
 		</div>
 		<div id="installed"></div>
